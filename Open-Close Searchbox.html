@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body{
+            min-height: 500px;
+            background-color: navy;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        input:first-of-type{
+            scale: 0;
+            transform-origin: right;
+            transition: 0.25s;
+            border: none;
+            outline: none;
+            height: 50;
+            width: 150px;
+            border-radius: 5px;
+            font-size: 2rem;
+        }
+
+        form input:last-of-type{
+            width: 50px;
+            height: 50px;
+            margin-left: 2px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 500,
+          'GRAD' 0,
+          'opsz' 24
+        }
+
+        form div{
+            position: absolute;
+            background-color: green;
+            display: block;
+            width: 50px;
+            height: 50px;
+            top: 0%;
+            scale: 1;
+            transition: 1s;
+            opacity: 0;
+            margin-left: 150px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- This searchbox has best behavior. In touching devices it's not submit when you touch first
+         time but open the searchbox, when you touch submit button again then it fires the submit event and
+         never change any behavior of mouse or touch devices.
+         If you want to use this query you should be sure about opener div cover the submit input.It'll change
+         depending your searchbox's length. Alike any other input tags, That length should set with Absolute 
+         length. When you want to check that set the property of "opacity"s value as "1" and play with 
+         margin and cover it. It has to be "position: absolute", "top: 0%", "scale: 1" and "transition: 1s"
+         (at least give enough time for not fire the submit event). Use margin for move the opener div and 
+         fit width and height for totally cover the submit button. I personally don't advice to change 
+         "display: block" and if you know any other way to make that div invisible you could use that 
+         property except "opacity: 0".  -->
+        
+    <form>
+        <input type="search" name="search" id="" onclick="" onmouseover="" onmouseout="">
+        <input type="submit" value="search" class="material-symbols-outlined">  
+        <div></div>
+    </form>
+
+    <script>
+        let searchBox = document.querySelector("input:first-of-type");
+        let submitButton = document.querySelector("input:last-of-type");
+        let formItself = document.querySelector("form");
+        let searchBoxOpener = document.querySelector("form div");
+
+        searchBoxOpener.addEventListener("mouseover", function(){
+            searchBox.style.scale = 1;
+            searchBoxOpener.style.scale = 0;
+        });
+
+        submitButton.addEventListener("mouseover", () =>{
+            searchBox.style.scale = 1;          
+        });
+
+        submitButton.addEventListener("mouseout", () =>{
+            searchBox.style.scale = 0;    
+        });
+
+        searchBox.addEventListener("mouseover", () =>{
+            searchBox.style.scale = 1;    
+        });
+
+        searchBoxOpener.addEventListener("touchstart", () =>{
+            searchBox.style.scale = 1;
+            searchBoxOpener.style.scale = 0;
+        });
+    </script>
+</body>
+</html>
