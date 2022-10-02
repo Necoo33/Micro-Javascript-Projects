@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #dad8d8;
+            display: flex;
+            place-content: center;
+            margin-top: 100px;
+            color: crimson;
+        }
+
+        .todolist-container{
+            font-family: "Poppins";
+        }
+
+        .todolist-container h2{
+            text-align: center;
+        }
+        
+        .todolist-container h3{
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            place-content: center;
+        }
+
+        form input{
+            font-family: "Poppins";
+            margin-bottom: 5px;
+            width: 250px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: white;
+            color: crimson;
+            font-weight: bold;
+        }
+
+        .item-self{
+            display: flex;
+            align-items: center;
+            place-content: space-between;
+            border: 3px solid crimson;
+            margin-bottom: 5px;
+            border-radius: 3px;
+        }
+
+        .todo-item{
+            font-size: 1.5rem;
+            align-items: center;
+            min-width: 300px;
+        }
+
+        .symbol{
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .symbol:hover{
+            scale: 1.1;
+        }
+
+        .trash{
+            max-width: 30px;
+            fill: crimson;
+        }
+
+        .todo-item-appender{
+            display: flex;
+            place-content: space-evenly;
+        }
+
+        .todo-item-appender textarea{
+            font-family: "Poppins";
+            border-radius: 20px;
+            background-color: white;
+            color: crimson;
+            font-size: 1.2rem;
+            width: 250px;
+        }
+
+        .todo-item-appender button{
+            font-family: "Poppins";
+            padding: 10px;
+            background-color: crimson;
+            color: white;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .todo-item-appender button:hover{
+            scale: 1.1;
+            cursor: pointer;
+        }
+    </style>
+    <title>To-Do List</title>
+</head>
+<body>
+
+    <div class="todolist-container">
+        <h2>To Do List</h2>
+
+        <h3>For Search Items:</h3>
+
+        <form>
+            <!--<input type="search" name="" id="" placeholder="Search Items">-->
+            <input type="text" name="" id="" placeholder="Type whichever To-Do you want">
+        </form>
+
+
+        <div class="todo-item-container">
+                <div class="item-self">
+                    <p class="todo-item">Wake Up At The Morning</p><img src="delete.svg" alt="" class="trash symbol"> 
+                </div>
+
+                <div class="item-self">            
+                    <p class="todo-item">Wash Your Face</p><img src="delete.svg" alt="" class="trash symbol"> 
+                </div>
+
+                <div class="item-self">            
+                    <p class="todo-item">Have A Breakfast</p> <img src="delete.svg" alt="" class="trash symbol"> 
+                </div>
+        </div>
+
+        <div class="todo-item-appender">
+            <textarea name="" id="" cols="30" rows="1" placeholder="Type To-Do..."></textarea> <br>
+            <button>Add To Do</button>
+        </div>
+    </div>
+    
+    <script src="To-Do List.js"></script>
+</body>
+</html>
