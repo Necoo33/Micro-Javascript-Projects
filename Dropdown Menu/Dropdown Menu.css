@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap');
+
+body{
+    display: flex;
+    place-content: center;
+}
+
+.buttonsupperdiv{
+    display: flex;
+    place-content: center;
+    position: relative;
+    margin-top: 50px;
+    font-size: 1rem;
+}
+
+.buttons{
+    width: 14em;
+    height: 3em;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: #242424;
+    font-family: "Poppins";
+}
+
+.buttons:hover{
+    scale: 1.1;
+}
+
+.dropdownmenu{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    position: relative;
+}
+
+.dropdownlist{
+    transition: 0.3s;
+    position: absolute;
+    transform-origin: top;
+    scale: 0;
+    margin-top: 30px;
+}
+
+.dropdownunits{
+    display: block;
+    width: 14em;
+    height: 3em;
+    border: none;
+    outline: none;
+}
+
+.dropdownunits:hover{
+    scale: 1.1;
+}
+
+.dropdownunits a{
+    text-decoration: none;
+    color: #242424;
+    font-family: "Poppins";
+}
+
+.dropdownmenutwo{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    position: relative;
+}
+
+.dropdownlisttwo{
+    transition: 0.3s;
+    position: absolute;
+    transform-origin: left;
+    scale: 0;
+    top: 50%;
+    left: 100%;
+}
+
+.dropdownunitstwo{
+    display: block;
+    width: 14em;
+    height: 3em;
+    border: none;
+    outline: none;
+}
+
+.dropdownunitstwo:hover{
+    scale: 1.1;
+}
+
+.dropdownunitstwo a{
+    text-decoration: none;
+    color: #242424;
+    font-family: "Poppins";
+}
+
+.mobilemenu{
+    display: none;
+}
+
+.mobilebuttons{
+    width: 7em;
+    height: 3em;
+}
+
+.mobiledropdownmenu{
+    display: flex;
+    align-items: center;
+    place-content: center;
+    position: relative;
+}
+
+.mobiledropdownlist{
+    transition: 0.3s;
+    position: absolute;
+    transform-origin: top;
+    scale: 0;
+    top: 0;
+    justify-content: center;
+    margin-top: 45px;
+    margin-left: -33px;
+    background-color: unset;
+    padding: 5px 30px;
+}
+
+.mobiledropdownunits{
+    display: block;
+    position: relative;
+    width: 7em;
+    height: 3em;
+    border: none;
+    outline: none;
+}
+
+.mobiledropdownunits a{
+    text-decoration: none;
+    color: #242424;
+    font-family: "Poppins";
+}
+
+.closingmobileddmenu{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mobiledropdownmenuopening{
+    scale: 1;
+}
+
+@media screen and (max-width: 767px){
+    .buttons{
+        width: 7em;
+        font-size: 0.8em;
+    }
+    
+    .buttonsupperdiv{
+        display: none;
+    }
+
+    .mobilemenu{
+        display: flex;
+    }
+}
