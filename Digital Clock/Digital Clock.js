@@ -1,4 +1,4 @@
-// with normal behavior, digital clocks by builded with Date() object and with functions itself
+// with normal behavior, digital clocks by builded with Date() object and functions itself
 // show only one digit when the digit smaller than 10. by that query, ı solve this problem and eventually
 // all the time hours, minutes and seconds have two digits and if they're smaller than 10 first digit will
 // be 0. The problem solving query(which is between 14 and 28th lines) is completely mine.
