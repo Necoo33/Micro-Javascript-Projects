@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap');
+
+        body{
+            display: flex;
+            place-content: center;
+            font-family: "Poppins";
+            background-color: #e0e0e0;
+        }
+
+        .divofall{
+            max-width: 20em;
+            background-color: gray;
+        }
+
+        .divofall > *{
+            text-align: center;
+        }
+
+        button{
+            margin: 10px 0;
+            width: 12em;
+            height: 4em;
+            background-color: #1515d1;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-family: "Poppins";
+            font-size: 1rem;
+        }
+
+        button:hover{
+            scale: 1.1;
+            cursor: pointer;
+        }
+    </style>
+    <title>Average Point Calculator</title>
+</head>
+<body>
+    <div class="divofall">
+        <h2>Average Point Calculator</h2>
+
+        <div class="sendpoints">
+            <label for="points">Write Points:</label>
+            <input type="text" name="points" id="">
+
+            <br>
+
+            <button class="savepoints">Send Point</button>
+
+            <button class="deletelastnumber">Delete Last Point</button>
+        </div>
+
+        <div class="buttons">
+            <button class="getaverage">Get Point's Average</button>
+
+            <br>
+
+            <button class="resetbutton">Reset Points</button>
+        </div>
+
+        <div class="outputs">
+            <div class="string-of-points"></div>
+
+            <div class="string-of-average-point"></div>
+        </div>
+
+    </div>
+    
+    <script src="Average Point Calculator.js"></script>
+</body>
+</html>
