@@ -53,7 +53,7 @@ getAveragePoint.addEventListener("click", function(){
     writePointsOnScreen.textContent = `Average Of All Points: ${finalAverage}`;
     stringOfAveragePoint.append(writePointsOnScreen);
 
-    localStorage.setItem("Average Point Of Last Time", writePointsOnScreen.textContent);
+    localStorage.setItem("Average Point Of Last Time", finalAverage);
 });
 
 let showLocalStorageItem = document.createElement("p");
