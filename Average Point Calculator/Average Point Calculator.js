@@ -5,6 +5,8 @@
 // press or touch the points which committed before reload and could calculate too many points
 // even if page were reload.
 
+// It would work both smartphones and pc's.
+
 let allPage = document.querySelector("body");
 let writeBox = document.querySelector("input");
 let deleteLastAddedNumber = document.querySelector(".deletelastnumber");
