@@ -2,8 +2,8 @@
 // and save on local storage of the result and committed points of last calculation.
 // when page refresh, it takes that data from local storage and show it on the screen with
 // fit strings. The user can continue the calculation with easily commit one number and 
-// press or touch the points which committed before reload and could calculate too many points
-// even if page were reload.
+// press or touch the points which committed before reload and press commit again. By that query,
+// could calculate too many points even if page were reload.
 
 // It would work both smartphones and pc's.
 
