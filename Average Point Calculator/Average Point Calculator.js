@@ -1,48 +1,56 @@
-let writingBox = document.querySelector("input");
-let deleteLastNumber = document.querySelector(".deletelastnumber");
-let savePoints = document.querySelector(".savepoints");
-let getAveragePoint = document.querySelector(".getaverage");
+let allPage = document.querySelector("body");
+let writeBox = document.querySelector("input");
+let deleteLastAddedNumber = document.querySelector(".deletelastnumber");
+let savePointButton = document.querySelector(".savepoint");
+let getAveragePointButton = document.querySelector(".getaveragepoint");
 let resetButton = document.querySelector(".resetbutton");
-let outputs = document.querySelector(".outputs");
-let stringOfAveragePoint = document.querySelector(".string-of-average-point");
-let stringOfPoints = document.querySelector(".string-of-points");
+let outputOfAveragePoint = document.querySelector(".outputofaveragepoint");
+let outputOfPointsParagraph = document.querySelector(".outputofpointsparagraph");
 
 let allPoints = [];
 
-let writePointsDown = document.createElement("p");
-writePointsDown.classList.add("stringofpoints");
-writePointsDown.textContent = "Currently written points are: ";
-stringOfPoints.append(writePointsDown);
+let writeNotesDown = document.createElement("p");
+writeNotesDown.classList.add("stringofpoints");
+writeNotesDown.textContent = "Recently Committed Points By Order: ";
+outputOfPointsParagraph.append(writeNotesDown);
 
-savePoints.addEventListener("click", function(){
-    let convertValueToNumber = Number(writingBox.value);
-    allPoints.push(convertValueToNumber);
+savePointButton.addEventListener("click", function(){
+    let convertInputToNumber = Number(writeBox.value);
+    allPoints.push(convertInputToNumber);
 
-    if(convertValueToNumber === 0){
+    if(convertInputToNumber === 0){
         allPoints.pop();
-        writingBox.value = "";
+        writeBox.value = "";
     };
 
-    if(convertValueToNumber !== 0){
-        writePointsDown.textContent += `${convertValueToNumber}, `;
+    if(convertInputToNumber !== 0){
+        writeNotesDown.innerHTML += `<span class='spanclass'>${convertInputToNumber}</span>`;
 
-        localStorage.setItem("Points", [...allPoints]);
+        localStorage.setItem("Committed Points", [...allPoints]);
 
-        writingBox.value = "";
+        writeBox.value = "";
 
     };
+
+    Array.from(document.querySelectorAll(".spanclass")).forEach(function(parameter){
+        parameter.addEventListener("click", function(){
+            writeBox.value = Number(parameter.textContent);
+        });
+    });
 
 });
 
-deleteLastNumber.addEventListener("click", function(){
+deleteLastAddedNumber.addEventListener("click", function(){
     allPoints.pop();
 
-    writePointsDown.textContent += `(last number was deleted), `;
+    localStorage.setItem("Committed Points", [...allPoints]);
+
+    writeNotesDown.lastChild.remove();
 });
 
-let writePointsOnScreen = document.createElement("p");
+let writeNotesToScreen = document.createElement("p");
 
-getAveragePoint.addEventListener("click", function(){
+getAveragePointButton.addEventListener("click", function(){
     let findAverage = allPoints.reduce(function(parameterOne, parameterTwo){
         return parameterOne + parameterTwo;
     }, 0);
@@ -50,49 +58,64 @@ getAveragePoint.addEventListener("click", function(){
     let finalAverage = findAverage / allPoints.length;
 
 
-    writePointsOnScreen.textContent = `Average Of All Points: ${finalAverage}`;
-    stringOfAveragePoint.append(writePointsOnScreen);
+    writeNotesToScreen.textContent = `Average Point: ${finalAverage}`;
+    outputOfAveragePoint.append(writeNotesToScreen);
 
-    localStorage.setItem("Average Point Of Last Time", finalAverage);
+    localStorage.setItem("Last Shown Average Point", finalAverage);
 });
 
-let showLocalStorageItem = document.createElement("p");
-let showAllOfThePoints = document.createElement("p");
+let showLocalStorageData = document.createElement("p");
+let showAllPoints = document.createElement("p");
 
 function getUnresetDatasFromLocalStorage(){
-    let getDataFromLocalStorage = localStorage.getItem("Average Point Of Last Time");
-    let getPointsFromLocalStorage = localStorage.getItem("Points");
+    let getLastDataFromLocalStorage = localStorage.getItem("Last Shown Average Point");
+    let takeCommittedPointsFromLocalStorage = localStorage.getItem("Committed Points");
 
-    showAllOfThePoints.textContent = `All written points before: ${getPointsFromLocalStorage}. you can continue your calculation with write and send that points again.`;
-    stringOfPoints.append(showAllOfThePoints);
+    let makeAnArrayFromCommittedPoints = takeCommittedPointsFromLocalStorage.split(",");
 
-    if(showAllOfThePoints.textContent.includes("null")){
-        showAllOfThePoints.remove();
+    showAllPoints.innerHTML = "Points including committed on last time: ";
+
+    makeAnArrayFromCommittedPoints.forEach(function(parameter){
+        showAllPoints.innerHTML += `<span class="spanclass">${parameter}</span>`;   
+    });
+
+    showAllPoints.innerHTML += "You can put that points to the input field by pressing on them. Before done that, be sure you already committed at least one point.";
+
+    Array.from(document.querySelectorAll(".spanclass")).forEach(function(parameter){
+        parameter.addEventListener("click", function(){
+            writeBox.value = parameter.textContent;
+        });
+    });
+
+    outputOfPointsParagraph.append(showAllPoints);
+
+    if(showAllPoints.textContent.includes("null")){
+        showAllPoints.remove();
     };
 
-    showLocalStorageItem.textContent = `Most recent point which you found: ${getDataFromLocalStorage}`;
-    stringOfAveragePoint.append(showLocalStorageItem);
+    showLocalStorageData.textContent = `Founded point on last calculation: ${getLastDataFromLocalStorage}`;
+    outputOfAveragePoint.append(showLocalStorageData);
 
-    if(showLocalStorageItem.textContent.includes("null")){
-        showLocalStorageItem.remove();
+    if(showLocalStorageData.textContent.includes("null")){
+        showLocalStorageData.remove();
     };
 
 };
 
- getUnresetDatasFromLocalStorage();
+getUnresetDatasFromLocalStorage();
 
 function resetTheDatas(){
-    localStorage.removeItem("Points");
-    localStorage.removeItem("Average Point Of Last Time");
+    localStorage.removeItem("Committed Points");
+    localStorage.removeItem("Last Shown Average Point");
 };
 
 
 resetButton.addEventListener("click", function(){
     allPoints.splice(0, ...allPoints);
 
-    writePointsDown.remove();
+    writeNotesDown.remove();
 
-    //writePointsOnScreen.remove();
+    writeNotesToScreen.remove();
 
     resetTheDatas();
 

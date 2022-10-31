@@ -39,36 +39,44 @@
             scale: 1.1;
             cursor: pointer;
         }
+
+        .spanclass{
+            cursor: pointer;
+        }
+
+        .spanclass::after{
+            content: ", ";
+        }
     </style>
     <title>Average Point Calculator</title>
 </head>
 <body>
     <div class="divofall">
-        <h2>Average Point Calculator</h2>
+        <h2>Average Point Caltulator</h2>
 
-        <div class="sendpoints">
+        <div class="pointsendsection">
             <label for="points">Write Points:</label>
             <input type="text" name="points" id="">
 
             <br>
 
-            <button class="savepoints">Send Point</button>
+            <button class="savepoint">Commit Point</button>
 
-            <button class="deletelastnumber">Delete Last Point</button>
+            <button class="deletelastnumber">Delete Last Committed Point</button>
         </div>
 
-        <div class="buttons">
-            <button class="getaverage">Get Point's Average</button>
+        <div class="tuslar">
+            <button class="getaveragepoint">Get Average Point</button>
 
             <br>
 
-            <button class="resetbutton">Reset Points</button>
+            <button class="resetbutton">Reset The Points</button>
         </div>
 
         <div class="outputs">
-            <div class="string-of-points"></div>
+            <div class="outputofpointsparagraph"></div>
 
-            <div class="string-of-average-point"></div>
+            <div class="outputofaveragepoint"></div>
         </div>
 
     </div>
