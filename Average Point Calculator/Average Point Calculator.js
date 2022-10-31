@@ -1,4 +1,6 @@
-let allPage = document.querySelector("body");
+// this is completely my original code. It takes the number which committed, find average of them, 
+// and save on local storage of the result and committed points of last calculation.
+
 let writeBox = document.querySelector("input");
 let deleteLastAddedNumber = document.querySelector(".deletelastnumber");
 let savePointButton = document.querySelector(".savepoint");
