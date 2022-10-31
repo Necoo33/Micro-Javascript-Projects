@@ -102,7 +102,7 @@ function getUnresetDatasFromLocalStorage(){
         showAllPoints.remove();
     };
 
-    showLocalStorageData.textContent = `Founded point on last calculation: ${getLastDataFromLocalStorage}`;
+    showLocalStorageData.textContent = `Founded point on last calculation before refresh: ${getLastDataFromLocalStorage}`;
     outputOfAveragePoint.append(showLocalStorageData);
 
     if(showLocalStorageData.textContent.includes("null")){
