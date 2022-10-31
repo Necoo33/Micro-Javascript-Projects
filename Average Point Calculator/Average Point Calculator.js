@@ -1,6 +1,11 @@
 // this is completely my original code. It takes the number which committed, find average of them, 
 // and save on local storage of the result and committed points of last calculation.
+// when page refresh, it takes that data from local storage and show it on the screen with
+// fit strings. The user can continue the calculation with easily commit one number and 
+// press or touch the points which committed before reload and could calculate too many points
+// even if page were reload.
 
+let allPage = document.querySelector("body");
 let writeBox = document.querySelector("input");
 let deleteLastAddedNumber = document.querySelector(".deletelastnumber");
 let savePointButton = document.querySelector(".savepoint");
@@ -16,7 +21,7 @@ writeNotesDown.classList.add("stringofpoints");
 writeNotesDown.textContent = "Recently Committed Points By Order: ";
 outputOfPointsParagraph.append(writeNotesDown);
 
-savePointButton.addEventListener("click", function(){
+savePointButton.addEventListener("pointerdown", function(){
     let convertInputToNumber = Number(writeBox.value);
     allPoints.push(convertInputToNumber);
 
@@ -35,14 +40,14 @@ savePointButton.addEventListener("click", function(){
     };
 
     Array.from(document.querySelectorAll(".spanclass")).forEach(function(parameter){
-        parameter.addEventListener("click", function(){
+        parameter.addEventListener("pointerdown", function(){
             writeBox.value = Number(parameter.textContent);
         });
     });
 
 });
 
-deleteLastAddedNumber.addEventListener("click", function(){
+deleteLastAddedNumber.addEventListener("pointerdown", function(){
     allPoints.pop();
 
     localStorage.setItem("Committed Points", [...allPoints]);
@@ -52,7 +57,7 @@ deleteLastAddedNumber.addEventListener("click", function(){
 
 let writeNotesToScreen = document.createElement("p");
 
-getAveragePointButton.addEventListener("click", function(){
+getAveragePointButton.addEventListener("pointerdown", function(){
     let findAverage = allPoints.reduce(function(parameterOne, parameterTwo){
         return parameterOne + parameterTwo;
     }, 0);
@@ -84,7 +89,7 @@ function getUnresetDatasFromLocalStorage(){
     showAllPoints.innerHTML += "You can put that points to the input field by pressing on them. Before done that, be sure you already committed at least one point.";
 
     Array.from(document.querySelectorAll(".spanclass")).forEach(function(parameter){
-        parameter.addEventListener("click", function(){
+        parameter.addEventListener("pointerdown", function(){
             writeBox.value = parameter.textContent;
         });
     });
@@ -112,7 +117,7 @@ function resetTheDatas(){
 };
 
 
-resetButton.addEventListener("click", function(){
+resetButton.addEventListener("pointerdown", function(){
     allPoints.splice(0, ...allPoints);
 
     writeNotesDown.remove();
