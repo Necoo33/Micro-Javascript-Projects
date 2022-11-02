@@ -1,0 +1,113 @@
+body{
+    background-color: #c5c2c2/*#dddada*/;
+    box-sizing: border-box;
+}
+
+.wholewebsite{
+    margin: 0 10vw;
+}
+
+header{
+    display: flex;
+    place-content: space-between;
+}
+
+.logo{
+    font-size: 1.75rem;
+    font-family: Arial;
+}
+
+.theme-change input{
+    appearance: none;
+    width: 1.7em;
+    height: 1.7em;
+    border-radius: 100%;
+    border: 3px solid black;
+}
+
+input:first-of-type:checked{
+    background-color: white;
+    border-color: white;
+}
+
+input:nth-of-type(2):checked{
+    background-color: black;
+    border-color: black;
+}
+
+input:last-of-type:checked{
+    background-color: #df1c3d;
+    border-color: #df1c3d;
+}
+
+.hero{
+    display: flex;
+    place-content: center;
+    align-content: center;
+    width: 80vw;
+    height: 30vh;
+    min-height: 20vh;
+}
+
+.hero p{
+    font-size: 3rem;
+}
+
+.upperbuttons{
+    display: flex;
+    place-content: center;
+}
+
+button{
+    background-color: #181818;
+    width: 15em;
+    height: 3em;
+    border: none;
+}
+
+button a{
+    text-decoration: none;
+    color: #c5c2c2;
+}
+
+button a:hover{
+    text-decoration: underline;
+}
+
+main{
+    text-align: justify;
+}
+
+main h2{
+    text-align: center;
+}
+
+.links{
+    display: flex;
+    place-content: center;
+}
+
+ul{
+    width: 16vw;
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+li a:hover{
+    opacity: 70%;
+}
+
+footer{
+    padding: 1em;
+    text-align: center;
+    border-top: 3px solid black;
+}
+
+footer p{
+    font-size: 1.2rem;
+}
