@@ -2,7 +2,7 @@
 // district except a city in the searchbar it outputs district name and the administrative area and 
 // the country code of the country which that district and city belong. I also translated the most 
 // common weather conditions to turkish from english. Because of that i don't change the turkish texts 
-// inside of html.
+// inside of html. You can see outputs in the "outputs" folder.
 
 // ı took the datas from https://developer.accuweather.com, as Net Ninja does.
 
