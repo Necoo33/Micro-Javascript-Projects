@@ -1,0 +1,74 @@
+/* This Css styles are completely mine. */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap');
+
+body{
+    background-color: white;
+    font-family: "Poppins";
+}
+
+.flextag{
+    display: flex;
+    place-content: center;
+}
+
+.uppertag{
+    display: block;
+}
+
+.uppertag h1{
+    text-align: center;
+}
+
+.citysearchingform{
+    display: block;
+    text-align: center;
+}
+
+input:last-of-type{
+    border: none;
+    outline: none;
+    padding: 1em;
+    border-radius: 30px;
+}
+
+input:last-of-type:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.cities{
+    margin: 0 auto;
+    width: 20em;
+    height: 70em;
+    display: none;
+}
+
+.isdayornight{
+    position: relative;
+    width: 20em;
+    max-height: 40em;
+    object-fit: cover;
+    object-position: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(gray, slategray);
+}
+
+.weatherconditionicon{
+    border-radius: 100%;
+    max-width: 5em;
+    max-height: 5em;
+    /*top: 50%;
+    left: 50%;*/
+    transform: translate(160%, -70%);
+    z-index: 1000;
+    background-color: white;
+}
+
+.cityinfos{
+    display: block;
+    width: 20em;
+    height: 30em;
+    translate: 0 -60px;
+}
