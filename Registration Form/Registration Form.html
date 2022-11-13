@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flextag{
+            display: flex;
+            place-content: center;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        label{
+            font-size: 1.2rem;
+        }
+
+        label:first-of-type{
+            padding-right: 100px;
+        }
+
+        label:nth-of-type(2){
+            padding-right: 73px;
+        }
+        label:nth-of-type(3){
+            padding-right: 23px;
+        }
+
+        label:nth-of-type(4){
+            padding-right: 92px;
+        }
+
+        input{
+            width: 200px; 
+        }
+
+        .valid{
+            border: 5px solid green;
+        }
+
+        .invalid{
+            border: 5px solid red;
+        }
+
+        form > div > p{
+            font-size: 0.7rem;
+            max-width: 300px;
+        }
+    </style>
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <div class="flextag">
+        <div class="formuppertag">
+            <h2>Registration form</h2>
+            <form>
+                <label for="fullname">Name:</label>
+                <input type="text" name="fullname" id="full-name">
+                <br>
+                <div class="nameinformation">
+                    <p>Your Name should be long between 2-30 characters.</p>
+                </div>
+                <label for="passwordfirst">Password:</label>
+                <input type="password" name="passwordfirst" id="password-first">
+                <br>
+                <div class="firstpasswordinformation">
+                    <p>Your Password should include at least 1 uppercase, 1 lowercase, 1 digit and 1 symbol and should be long at least 6, utmost 16 characters.</p>
+                </div>
+                <label for="passwordsecond">Password Again:</label>
+                <input type="password" name="passwordsecond" id="password-second">
+                <br>
+                <div class="secondpasswordinformation">
+                    <p>Type your Password again.</p>
+                </div>
+                <label for="email">E-Mail:</label>
+                <input type="email" name="email" id="e-mail">
+                <br>
+                <div class="emailinformation">
+                    <p>Type your E-Mail adress:</p>
+                </div>
+                <label for="telephone">Telephone Number:</label>
+                <input type="tel" name="telephone" id="telephone">
+                <br>
+                <div class="telephoneinformation">
+                    <p>Type your phone number as consecutively with 11 digits.</p>
+                </div>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+    
+    <script src="Registration Form.js"></script>
+</body>
+</html>
