@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        .chronometeruppertag{
+            margin: 0 auto;
+        }
+
+        .chronometer{
+            display: flex;
+            place-content: center;
+            padding: 1.5em;
+        }
+
+        span{
+            font-size: 2rem;
+        }
+
+        span:nth-of-type(2){
+            font-size: 2.5rem;
+        }
+
+        span:nth-of-type(4){
+            font-size: 2.5rem;
+        }
+
+        .chronometerbuttons{
+            display: flex;
+            place-content: center;
+            align-items: center;
+        }
+
+        .chronometerbuttons div{
+            scale: 2.2;
+            padding: 0.1em;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        .chronometerbuttons div:first-of-type{
+            display: flex;
+            place-content: center;
+            align-items: center;
+            scale: 1.75;
+        }
+
+        .play{
+            max-width: 5px;
+            max-height: 5px;
+        }
+
+        .savedtimes{
+            text-align: center;
+        }
+
+        .preventingrepresstobutton{
+            background-color: green;
+            display: none;
+            position: absolute;
+            z-index: 1000;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+        }
+    </style>
+    <title>Chronometer</title>
+</head>
+<body>
+    <div class="chronometeruppertag">
+        <div class="chronometer">
+            <p class="chronometeritself"><span class="hour">00</span><span>:</span><span class="minute">00</span><span>:</span><span class="second">00</span></p>
+        </div>
+        <div class="chronometerbuttons">
+            <!--<div class="yenidenbasmayamaniolmakdivi"></div>-->
+            <!--<div class="oynattusu oynatici material-symbols-outlined">play_arrow <div class="yenidenbasmayamaniolmakdivi"></div></div>--> 
+            <div><div class="playbutton play material-symbols-outlined">play_arrow</div><div class="preventingrepresstobutton"></div></div>  
+            <div class="stopbutton material-symbols-outlined">pause</div>
+            <div class="recordbutton material-symbols-outlined">flag_circle</div>
+            <div class="resetbutton material-symbols-outlined">restart_alt</div>
+            <div class="savebutton material-symbols-outlined">save</div>
+        </div>
+        <div class="savedtimes">
+
+        </div>
+    </div>
+
+    <script src="Chronometer.js"></script>
+</body>
+</html>
