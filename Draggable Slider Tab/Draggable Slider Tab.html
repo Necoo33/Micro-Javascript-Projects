@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+        body{
+            font-family: "Poppins";
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slide-tab-upper-div{
+            display: flex;
+            align-items: center;
+            place-content: center;
+        }
+
+        .buttons{
+            display: flex;
+            align-items: center;
+            max-width: 1000px;
+            position: relative;
+            gap: 0.5em;
+            border-radius: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .event-cant-occur{
+            pointer-events: none;
+        }
+
+        .dragging-bug-fix{
+            scroll-behavior: auto;
+        }
+
+        span:hover{
+            background: gray;
+        }
+
+        .sliding-buttons{
+            cursor: pointer;
+            padding: 0.5em;
+            border-radius: 30px;
+
+        }
+
+        .sliding-buttons:first-of-type{
+            background: linear-gradient(90deg, white, 90%, transparent);
+            visibility: hidden;
+        }
+
+        .sliding-buttons:last-of-type{
+            background: linear-gradient(-90deg, white, 90%, transparent);
+        }
+
+        button{
+            border-radius: 30px;
+            background-color: #d7d7d7;
+            border: none;
+            font-size: 0.75rem;
+            padding: 0.5em 1.5em;
+            user-select: none;
+
+        }
+
+        button a{
+            text-decoration: none;
+            color: #161616;
+            user-select: none;
+
+        }
+
+        .clicked{
+            background: black;
+            font-style: italic;
+        }
+
+        .clicked a{
+            color: white;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="slide-tab-upper-div">
+        <span class="material-symbols-outlined sliding-buttons">chevron_left</span>
+        <div class="buttons">
+            <button class="clicked"><a href="#" draggable="false">First Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Whatever Button</a></button>
+            <button class="unclicked"><a href="#" draggable="false">Last Button</a></button>
+        </div>
+        <span class="material-symbols-outlined sliding-buttons">chevron_right</span>
+    </div>
+    
+
+    <script src="Draggable Slider Tab.js"></script>
+</body>
+</html>
