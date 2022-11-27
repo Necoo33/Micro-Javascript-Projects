@@ -12,24 +12,13 @@ let buttonsWillClick = document.querySelectorAll("button");
 
 let draggingPoints = []; 
 
-/* By the change in the button's inner text, the Math functions should change. "buttons.scrollLeft + buttons.clientWidth"
-addition should be equal to "buttons.scrollWidth". Because some fractional numbers prevent the 2. and 3. if statement's
-conditions occur. Depends to your situation, you can use "Math.floor()", "Math.ceil()" or if you want, "Math.Round()"
-to fix that problem.
-
-If you want to check that just uncomment the commented lines.*/
-
 function removeTheArrowOfTheFinishedSide(){
     draggingPoints.push(buttons.scrollLeft);
     let reverseDraggingPoints = draggingPoints.reverse();
 
     if((reverseDraggingPoints[0] !== reverseDraggingPoints[1])){
         slideToLeftButton.style.visibility = "visible";
-        //console.log(buttons.clientWidth);
-        //console.log(buttons.scrollWidth);
     }
-
-    //console.log(reverseDraggingPoints);
 
     if(Math.round(reverseDraggingPoints[0]) + buttons.clientWidth === buttons.scrollWidth){
         slideToRightButton.style.visibility = "hidden";
@@ -66,14 +55,12 @@ buttons.addEventListener("pointermove", function(parameter){
 
 slideToLeftButton.addEventListener("pointerdown", function(){
     buttons.scrollLeft -= 325;
-    //console.log(buttons.scrollLeft)
 
     removeTheArrowOfTheFinishedSide()
 });
 
 slideToRightButton.addEventListener("pointerdown", function(){
     buttons.scrollLeft += 325;
-    //console.log(buttons.scrollLeft)
 
     removeTheArrowOfTheFinishedSide();
 });
