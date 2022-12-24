@@ -1,3 +1,5 @@
+// this code completely belongs to me.
+
 let imagesTag = document.querySelector(".images-tag");
 
 let leftSlideButton = document.querySelector(".slide-buttons:first-of-type");
