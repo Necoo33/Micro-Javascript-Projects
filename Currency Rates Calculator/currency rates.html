@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="currency rates.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="flex-tag">
+        <div class="flex-tag-inner-div">
+            <div class="title">
+                <h1>Döviz Değeri Getirici</h1>
+            </div>    
+
+            <div class="get-value-relative-turkish-lira">
+                <h2>Dövizlerin Türk Lirası Cinsinden Değerini bul:</h2>
+
+                <form class="get-value-relative-turkish-lira-form">
+                    <label for="compare-with-turkish-lira">Mukayese Edilecek Döviz:</Label>
+                    <input class="turkish-lira-input" type="text" name="compare-with-turkish-lira">
+                    <input type="submit" value="Mukayese Et">
+                </form>
+
+                <p>Türk lirasına göre <span class="type-of-currency"></span> <span class="first-dynamic-value">...</span></p>
+            </div>
+
+            <div class="get-exchange-rates">
+                <h2>Diğer Döviz Cinslerini Mukayese Edin:</h2>
+
+                <form class="exchange-rates-form">
+                    <div>
+                        <label for="exchangeMoneyOne">1. Döviz:</Label>
+                        <input type="text" name="exchangeMoneyOne">
+                        <label for="exchangeMoneyTwo">2. Döviz:</label>
+                        <input type="text" name="exchangeMoneyTwo">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" value="Mukayese Et">
+                    </div>
+                </form>
+
+                <div class="output-exchange-rates">
+                    <p>Muamele Neticesi: <span class="second-dynamic-value"></span></p>
+                </div>
+            </div>
+
+            <div class="comparable-moneys">
+                <p>Mukayese edilebilir paralar yazılışlarıyla beraber: <span class="comparable-moneys"></span></p>
+                <br>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="currency rates.js"></script>
+</body>
+</html>

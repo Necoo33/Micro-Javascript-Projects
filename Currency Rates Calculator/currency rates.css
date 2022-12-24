@@ -1,0 +1,99 @@
+body{
+    background-color: #c0c0c0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-tag{
+    display: flex;
+    place-content: center;
+    max-width: 35vw;
+}
+
+.flex-tag .flex-tag-inner-div{
+    translate: 100% 0;
+}
+
+.title h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.get-value-relative-turkish-lira h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.get-value-relative-turkish-lira input:last-of-type{
+    background-color: #222;
+    border: none;
+    outline: none;
+    padding: 1.2em;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.get-value-relative-turkish-lira input:last-of-type:hover{
+    background-color: white;
+    color: #222;
+}
+
+.get-exchange-rates h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.exchange-rates-form div:first-of-type label{
+    width: 5em;
+}
+
+.exchange-rates-form div:first-of-type input{
+    width: 170px;
+}
+
+.exchange-rates-form div:last-of-type{
+    display: flex;
+    place-content: center;
+}
+
+.exchange-rates-form div:last-of-type input:last-of-type{
+    background-color: #222;
+    border: none;
+    outline: none;
+    padding: 1.7em;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.exchange-rates-form div:last-of-type input:last-of-type:hover{
+    background-color: white;
+    color: #222;
+}
+
+.comparable-moneys p span{
+    text-align: justify;
+}
+
+
+@media only screen and (max-width: 900px){
+    .flex-tag{
+        max-width: 50vw;
+    }
+
+    .flex-tag .flex-tag-inner-div{
+        translate: 50% 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .flex-tag{
+        max-width: 100vw;
+    }
+
+    .flex-tag .flex-tag-inner-div{
+        translate: 0;
+        right: 50%;
+        left: 50%;
+    }
+}
