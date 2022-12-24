@@ -1,0 +1,58 @@
+.flex-tag{
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.flex-tag .images-tag{
+    position: relative;
+    display: flex;
+    place-content: center;
+    border: 2px solid black;
+    gap: 5px;
+    /* Be aware, if you want to work the query which makes the arrow of the lasting side invisible
+       you should set the max width with percentages and below the 100%*/
+    max-width: 90%; 
+    overflow: hidden;
+    transition: 0.2s ease-in;
+    box-sizing: border-box;
+}
+
+.dragging-bug-fix{
+    scroll-behavior: auto;
+}
+
+.events-cannot-occur{
+    pointer-events: none;
+}
+
+.events-can-occur{
+    pointer-events: auto;
+}
+
+.slide-buttons{
+    padding: 1.5em;
+    background-color: #cccaca;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.slide-buttons:first-of-type{
+    visibility: hidden;
+}
+
+.slide-buttons:last-of-type{
+    visibility: visible;
+}
+
+.slide-buttons span{
+    color: black;
+    user-select: none;
+}
+
+.flex-tag .images-tag img{
+    max-width: 35vw;
+    max-height: 20em;
+    display: inline-block;
+    user-select: none;
+}
