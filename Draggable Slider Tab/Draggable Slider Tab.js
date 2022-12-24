@@ -65,6 +65,18 @@ slideToRightButton.addEventListener("pointerdown", function(){
     removeTheArrowOfTheFinishedSide();
 });
 
+buttons.addEventListener("wheel", function(parameter){
+    console.log(parameter);
+
+    if(parameter.wheelDeltaY > 0){
+        buttons.scrollLeft -= 200;
+    } else if(parameter.wheelDeltaY < 0){
+        buttons.scrollLeft += 200;
+    }
+
+    removeTheArrowOfTheFinishedSide();
+});
+
 buttonsWillClick.forEach(function(parameter){
 
         let isPressingTrue = true;
