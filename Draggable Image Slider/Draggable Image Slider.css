@@ -16,7 +16,6 @@
     overflow: hidden;
     transition: 0.2s ease-in;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 .dragging-bug-fix{
