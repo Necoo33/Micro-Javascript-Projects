@@ -17,10 +17,10 @@ function deleteTheArrowOfLastingSide(){
 
     if((reverseRecordsOfDraggingToLeft[0] !== reverseRecordsOfDraggingToLeft[1])){
         leftSlideButton.style.visibility = "visible";
-        console.log(imagesTag.scrollWidth);
+        //console.log(imagesTag.scrollWidth);
     }
 
-    console.log(reverseRecordsOfDraggingToLeft);
+    //console.log(reverseRecordsOfDraggingToLeft);
 
     if(Math.round(reverseRecordsOfDraggingToLeft[0]) + imagesTag.clientWidth === imagesTag.scrollWidth){
         rightSlideButton.style.visibility = "hidden";
@@ -65,7 +65,7 @@ imagesTag.addEventListener("pointermove", function(parameter){
 });
 
 imagesTag.addEventListener("wheel", function(parameter){
-    console.log(parameter);
+    //console.log(parameter);
 
     if(parameter.wheelDeltaY > 0){
         imagesTag.scrollLeft -= 300;
