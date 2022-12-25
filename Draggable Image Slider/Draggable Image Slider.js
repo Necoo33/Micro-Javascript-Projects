@@ -68,9 +68,9 @@ imagesTag.addEventListener("wheel", function(parameter){
     console.log(parameter);
 
     if(parameter.wheelDeltaY > 0){
-        imagesTag.scrollLeft -= 200;
+        imagesTag.scrollLeft -= 300;
     } else if(parameter.wheelDeltaY < 0){
-        imagesTag.scrollLeft += 200;
+        imagesTag.scrollLeft += 300;
     }
 
     deleteTheArrowOfLastingSide();
