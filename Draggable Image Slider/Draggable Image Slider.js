@@ -1,4 +1,6 @@
-// this code completely belongs to me.
+// this code completely belongs to me. You can attach whichever link you want by changing value attribute.
+
+let flexTag = document.querySelector(".flex-tag");
 
 let imagesTag = document.querySelector(".images-tag");
 
@@ -101,4 +103,14 @@ imagesToClick.forEach(function(parameter){
             parameter.classList.remove("is-not-pressed");
         };
     });
+});
+
+flexTag.addEventListener("scroll", () => isLinkReallyClicked = false);
+
+flexTag.addEventListener("pointerup", function(parameter){
+    console.log(document.querySelector(".is-pressed").getAttribute("value"));
+
+    if(parameter.target.classList.contains("is-pressed") && isLinkReallyClicked){
+        location.assign(parameter.target.getAttribute("value"));
+    };
 });
